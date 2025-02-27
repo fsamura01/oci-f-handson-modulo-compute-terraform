@@ -118,6 +118,11 @@ resource "oci_core_instance" "webserver1" {
   display_name        = "webserver1"
   shape               = "VM.Standard.A1.Flex"
 
+  shape_config {
+    ocpus = 1
+    memory_in_gbs = 1
+  }
+
   create_vnic_details {
     subnet_id        = oci_core_subnet.tcb_subnet.id
     display_name     = "primaryvnic"
