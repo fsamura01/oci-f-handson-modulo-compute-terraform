@@ -1,4 +1,4 @@
-/* // Copyright (c) 2017, 2021, Oracle and/or its affiliates. All rights reserved.
+// Copyright (c) 2017, 2021, Oracle and/or its affiliates. All rights reserved.
 // Licensed under the Mozilla Public License v2.0
 
 
@@ -45,7 +45,7 @@ data "oci_identity_availability_domain" "ad" {
   ad_number      = var.ad_region_mapping[var.region]
 }
 
-resource "oci_core_virtual_network" "tcb_vcn" {
+/* resource "oci_core_virtual_network" "tcb_vcn" {
   cidr_block     = "10.1.0.0/16"
   compartment_id = var.compartment_ocid
   display_name   = "tcbVCN"
